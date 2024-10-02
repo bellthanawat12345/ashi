@@ -6,21 +6,8 @@ body, html {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-    background-color: rgba(9, 9, 92, 0.705);
+    background-color: hsl(223, 53%, 18%); 
     padding-top: 70px; /* เพิ่มพื้นที่ด้านบนเพื่อไม่ให้ซ้อนทับกับ navbar */
-}
-body::before {
-    content: "";
-    position: fixed; /* ให้เป็น fixed เพื่อให้เต็มจอ */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('Model-list1/images/bg.png'); /* เปลี่ยนเป็นภาพพื้นหลังของคุณ */
-    background-size: cover; /* ปรับขนาดให้พอดีกับหน้าจอ */
-    background-position: center; /* จัดกลางภาพ */
-    opacity: 0.5; /* ความโปร่งใส */
-    z-index: -1; /* ให้เป็นพื้นหลัง */
 }
 
 .navbar {
