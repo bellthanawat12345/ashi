@@ -1,0 +1,155 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Sarabun', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden; /* ปิดเฉพาะการเลื่อนในแนวนอน */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(223, 53%, 18%); /* สีพื้นหลัง */
+    z-index: -1; /* ให้เป็นพื้นหลัง */
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.nav-button {
+    background-color: #1ad61a;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #ff6f61;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto 20px auto; /* เพิ่มระยะห่างด้านบนเพื่อไม่ให้บังกับ navbar */
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px hsl(223, 53%, 18%);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #162447;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    outline: none;
+    display: flex;
+    flex-direction: column; /* เพื่อให้ชื่ออยู่ใต้รูปภาพ */
+    align-items: center; /* จัดกลาง */
+}
+
+.grid-item:nth-child(1),
+.grid-item:nth-child(2) {
+    grid-column: span 2; /* ทำให้สมาชิก 1 และ 2 ใช้พื้นที่ 2 คอลัมน์ */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    margin: 10px 0 0 0;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* ลดคอลัมน์เหลือ 2 คอลัมน์สำหรับหน้าจอเล็ก */
+    }
+
+    .grid-item:nth-child(1),
+    .grid-item:nth-child(2) {
+        grid-column: span 2; /* ให้กินพื้นที่ 2 คอลัมน์แทน */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* แสดง 1 คอลัมน์สำหรับหน้าจอเล็กมาก */
+    }
+
+    .grid-item:nth-child(1),
+    .grid-item:nth-child(2) {
+        grid-column: span 1; /* ให้กินพื้นที่ 1 คอลัมน์ */
+    }
+
+    h1 {
+        font-size: 2em; /* ลดขนาดหัวเรื่องในหน้าจอเล็ก */
+    }
+}

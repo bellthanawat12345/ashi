@@ -1,0 +1,121 @@
+.navbar-brand {
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงโลโก้และข้อความ */
+    align-items: center; /* จัดแนวโลโก้และข้อความให้อยู่กลาง */
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* ระยะห่างระหว่างโลโก้และข้อความ */
+    width: 50px; /* ขนาดโลโก้ */
+    height: 50px; /* ขนาดโลโก้ */
+    border-radius: 25px;
+}
+
+/* การจัดวิดีโอพื้นหลัง */
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+/* การจัดเนื้อหาให้อยู่ในตำแหน่งที่ถูกต้อง */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+/* การจัดโลโก้ */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* การจัดสไตล์ข้อความ */
+h1 {
+    font-size: 4em;
+    margin: 0;
+    color: gold;
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: gold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* การจัดปุ่ม */
+.button-container {
+    margin-top: 20px; /* ระยะห่างจากข้อความด้านบน */
+    display: flex; /* ใช้ Flexbox สำหรับการจัดเรียง */
+    justify-content: flex-end; /* จัดปุ่มให้อยู่ทางขวา */
+}
+
+.button-container button {
+    padding: 20px 40px; /* ขนาดปุ่ม */
+    font-size: 50px; /* ขนาดฟอนต์ */
+    cursor: pointer; /* แสดงตัวชี้ */
+    background-color: gold; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    border: none; /* ไม่มีกรอบ */
+    border-radius: 25px; /* ทำให้ปุ่มโค้ง */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* เอฟเฟกต์การเปลี่ยนสี */
+    margin-left: 100px; /* ระยะห่างจากปุ่ม */
+    display: inline-block; /* แสดงปุ่มในแถวเดียวกัน */
+}
+
+
+.button-container button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+}
+
+/* การปรับสำหรับหน้าจอขนาดเล็ก (Responsive Design) */
+@media (max-width: 768px) {
+    .container {
+        top: 40%;
+        left: 10px;
+        transform: translateY(-40%);
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .button-container button {
+        margin-left: 0;
+        width: 100%;
+    }
+}

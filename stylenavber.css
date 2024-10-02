@@ -1,0 +1,49 @@
+.navbar {
+    position: fixed; /* ติดอยู่ที่ด้านบน */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* ให้แน่ใจว่า navbar อยู่ด้านบนสุด */
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงโลโก้และเมนู */
+    justify-content: space-between; /* จัดให้อยู่สุดซ้ายและขวา */
+    align-items: center; /* จัดให้แนวกลางแนวตั้ง */
+    background-color: rgba(0, 0, 0); /* สีพื้นหลังของ navbar */
+    padding: 10px 20px; /* เพิ่ม padding รอบ ๆ navbar */
+}
+
+.logo-container img {
+    width: 50px; /* กำหนดความกว้างของโลโก้ */
+    height: 50px; /* กำหนดความสูงของโลโก้ */
+    border-radius: 50%; /* ทำให้ขอบของภาพเป็นวงกลม */
+    object-fit: cover; /* ปรับขนาดของภาพให้พอดีภายในวงกลม */
+}
+
+
+.navbar-brand {
+    color: #ffffff; /* สีของข้อความ */
+    margin-left: 10px; /* ระยะห่างระหว่างโลโก้และข้อความ */
+    font-size: 1.5em; /* ขนาดฟอนต์ของข้อความ */
+}
+
+.navigation {
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
+.nav-button {
+    background-color: #4CAF50; /* สีพื้นของปุ่ม: สีเขียวอ่อน */
+    border: none; /* ลบเส้นขอบ */
+    color: white; /* สีข้อความ */
+    padding: 10px 20px; /* ขนาดของปุ่ม */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; /* ขนาดข้อความ */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px; /* มุมโค้งของปุ่ม */
+    transition: background-color 0.3s, box-shadow 0.3s; /* เพิ่มการเปลี่ยนสีเมื่อ hover */
+    box-shadow: none; /* ลบเงาออก เพื่อให้ปุ่มดูเรียบ */
+}
+
+.nav-button:hover {
+    background-color: #45a049; /* เปลี่ยนสีปุ่มเมื่อ hover ให้เป็นโทนเข้มขึ้นเล็กน้อย */
+    box-shadow: none; /* ไม่ต้องมีเงาเมื่อ hover เพื่อคงความเรียบ */
+}
