@@ -6,7 +6,7 @@
     display: flex; /* ใช้ Flexbox เพื่อจัดเรียงโลโก้และเมนู */
     justify-content: space-between; /* จัดให้อยู่สุดซ้ายและขวา */
     align-items: center; /* จัดให้แนวกลางแนวตั้ง */
-    background-color: rgba(0, 0, 0); /* สีพื้นหลังของ navbar */
+    background-color: hsl(223, 53%, 18%);/* สีพื้นหลังของ navbar */
     padding: 10px 20px; /* เพิ่ม padding รอบ ๆ navbar */
 }
 
